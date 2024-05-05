@@ -10,25 +10,54 @@
 <body>
     <div class="fullPage">
 
+        <!-- left side of the page -->
         <div class="leftContainer">
             <img src="images/leafPhoto.jpg" alt="background photo of leaves">
             <div class="photoText">Odin Sign Up</div>
             <div class="imageCredits">Photo by Halie West on <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA">Unsplash </a></div>
         </div>
 
-        <div class="formContainer">
+        <!-- right side of the page -->
+        <div id="formContainer">
 
             <!-- form info text -->
             <div class="infoText textStandard">Sign up for information on the Odin Project! This is not a real form. However, if you want information, enter all the boxes below and you will have info sent to your email!</div>
-            <div class="infoText textStandard" style="font-style: italic; padding-bottom: 30px;">You know you want to.</div>
+            <div class="infoText textStandard" style="font-style: italic; padding-bottom: 15px;">You know you want to.</div>
 
             <!-- actual form -->
-            <form class="mainForm">
+            <form id="mainForm">
                 <legend class="infoText textStandard" style="background-color: white;">Let's do this!</legend>
+                <div class="row">
+                    <div class="col">
+                        <label for="first_name">*First Name<br></label>
+                        <input type="text" id="first_name" required> <br> <br>
+
+                        <label for="email">*Email<br></label>
+                        <input type="email" id="email" required> <br> <br>
+
+                        <label for="password">*Password<br></label>
+                        <input type="password" id="password" minlength="6" maxlength="18" required>
+                    </div>
+
+                    <div class="col">
+                        <label for="last_name">*Last Name<br></label>
+                        <input type="text" id="last_name" required> <br> <br>
+
+                        <label for="phone_number">Phone Number<br></label>
+                        <input type="tel" id="phone_number"> <br> <br>
+
+                        <label for="confirm_password">*Confirm Password<br></label>
+                        <input type="password" id="confirm_password" required> <br> <br>
+                    </div>
+                </div>
+
             </form>
 
-        </div>
+            <!-- create account button and sign in button -->
+            <button class="createAccount" type="submit" form="mainForm">Create Account</button>
 
+            <div class="signIn">Already have an account? <a href="" class="logIn">Log in</a></div>
+        </div>
     </div>
 </body>
 </html>
